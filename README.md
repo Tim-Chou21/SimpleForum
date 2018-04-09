@@ -1,5 +1,7 @@
 # Software Studio 2018 Spring Lab06 SimpleForum
 
+![alt text](example.gif)
+
 ## Grading Policy
 
 * **Deadline: 2018/04/10 17:20 (commit time)**
