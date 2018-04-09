@@ -10,6 +10,7 @@
 2. Complete the simple forum
     * Trace code (.html, .js, database.rulse.json)
         * Basic Firebase usage
+        * Change config.js to yours
         * Implement google and email login function
         * Realtime update database
         * Setting the rules for database read/write

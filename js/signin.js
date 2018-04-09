@@ -7,21 +7,21 @@ function initApp() {
     var btnSignUp = document.getElementById('btnSignUp');
 
     btnLogin.addEventListener('click', function () {
-        /// TODO 4: Add email login button event
+        /// TODO 2: Add email login button event
         ///         1. Get user input email and password to login
         ///         2. Back to index.html when login success
         ///         3. Show error message by "create_alert" and clean input field
     });
 
     btnGoogle.addEventListener('click', function () {
-        /// TODO 5: Add google login button event
+        /// TODO 3: Add google login button event
         ///         1. Use popup function to login google
         ///         2. Back to index.html when login success
         ///         3. Show error message by "create_alert"
     });
 
     btnSignUp.addEventListener('click', function () {        
-        /// TODO 6: Add signup button event
+        /// TODO 4: Add signup button event
         ///         1. Get user input email and password to signup
         ///         2. Show success message by "create_alert" and clean input field
         ///         3. Show error message by "create_alert" and clean input field

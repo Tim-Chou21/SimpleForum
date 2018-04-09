@@ -6,7 +6,7 @@ function init() {
         if (user) {
             user_email = user.email;
             menu.innerHTML = "<span class='dropdown-item'>" + user.email + "</span><span class='dropdown-item' id='logout-btn'>Logout</span>";
-            /// TODO 1: Complete logout button event
+            /// TODO 5: Complete logout button event
             ///         1. Add a listener to logout button 
             ///         2. Show alert when logout success or error (use "then & catch" syntex)
         } else {
@@ -21,7 +21,7 @@ function init() {
 
     post_btn.addEventListener('click', function () {
         if (post_txt.value != "") {
-            /// TODO 2: Push the post to database's "com_list" node
+            /// TODO 6: Push the post to database's "com_list" node
             ///         1. Get the reference of "com_list"
             ///         2. Push user email and post data
             ///         3. Clear text field
@@ -40,9 +40,9 @@ function init() {
     // Counter for checking when to update new post
     var second_count = 0;
 
-    /// TODO 3: Get all history posts when the web page is loaded and add listener to update new post
     postsRef.once('value')
         .then(function (snapshot) {
+            /// TODO 7: Get all history posts when the web page is loaded and add listener to update new post
             ///         1. Get all history post and push to a list (str_before_username + email + </strong> + data + str_after_content)
             ///         2. Join all post in list to html in once
             ///         4. Add listener for update the new post
