@@ -3,6 +3,9 @@
 ## Grading Policy
 
 * **Deadline: 2018/04/10 17:20 (commit time)**
+* **Do not discuss to each other**
+* **Deploy to Gitlab page after 17:20**
+
 
 ## Goal
 
