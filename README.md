@@ -1,8 +1,8 @@
-# Software Studio 2018 Spring Lab05 SlotGame
+# Software Studio 2018 Spring Lab06 SimpleForum
 
 ## Grading Policy
 
-* **Deadline: 2018/04/03 17:20 (commit time)**
+* **Deadline: 2018/04/10 17:20 (commit time)**
 
 ## Goal
 
