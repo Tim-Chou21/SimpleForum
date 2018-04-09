@@ -14,5 +14,5 @@
         * Implement google and email login function
         * Realtime update database
         * Setting the rules for database read/write
-    * **Finish 7 TODOs in index.js, signin.js, database.rulse.json**
+    * **Finish 8 TODOs in config.js, index.js, signin.js, database.rulse.json**
 3. Commit changes, and deploy to GitLab page.
