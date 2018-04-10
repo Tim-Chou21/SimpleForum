@@ -9,6 +9,14 @@ function init() {
             /// TODO 5: Complete logout button event
             ///         1. Add a listener to logout button 
             ///         2. Show alert when logout success or error (use "then & catch" syntex)
+            var btnLogout = document.getElementById('logout-btn');
+            btnLogout.addEventListener('click', e => {
+                firebase.auth().signOut().then(function(result){
+                    alert("success");
+                }).catch(function(error){
+                    alert("error");
+                });
+            });
         } else {
             // It won't show any post if not login
             menu.innerHTML = "<a class='dropdown-item' href='signin.html'>Login</a>";
@@ -25,6 +33,15 @@ function init() {
             ///         1. Get the reference of "com_list"
             ///         2. Push user email and post data
             ///         3. Clear text field
+        var Ref = firebase.database().ref("com_list");
+            var newpost = Ref.push();
+            
+            newpost.set({
+                data:post_txt.value,
+                email:user_email
+            }).catch(e=>console.log(e.message));
+            
+            document.getElementById('comment').value = '';
         }
     });
 
@@ -50,6 +67,21 @@ function init() {
             ///         6. Re-join all post in list to html when update
             ///
             ///         Hint: When history post count is less then new post count, update the new and refresh html
+            snapshot.forEach(function(childSnapshot){
+                var childData = childSnapshot.val();
+                total_post[total_post.length] = str_before_username + childData.email + "</strong>" + childData.data + str_after_content;
+                first_count += 1;
+            });
+            document.getElementById('post_list').innerHTML = total_post.join('');
+
+            postsRef.on('child_added',function(data){
+                second_count += 1;
+                if(second_count>first_count){
+                    var childData = data.val();
+                    total_post[total_post.length] = str_before_username + childData.email + "</strong>" + childData.data + str_after_content;
+                    document.getElementById('post_list').innerHTML = total_post.join('');
+                }
+            });
         })
         .catch(e => console.log(e.message));
 }

@@ -1,0 +1,41 @@
+[debug] [2018-04-10T09:47:30.928Z] ----------------------------------------------------------------------
+[debug] [2018-04-10T09:47:30.931Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\NTHUCS\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-10T09:47:30.931Z] CLI Version:   3.18.2
+[debug] [2018-04-10T09:47:30.931Z] Platform:      win32
+[debug] [2018-04-10T09:47:30.931Z] Node Version:  v6.10.3
+[debug] [2018-04-10T09:47:30.931Z] Time:          Tue Apr 10 2018 17:47:30 GMT+0800 (台北標準時間)
+[debug] [2018-04-10T09:47:30.931Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-10T09:47:30.939Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-10T09:47:30.939Z] > authorizing via signed-in user
+[debug] [2018-04-10T09:47:30.939Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-10T09:47:30.939Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/CHXknbsL_QhRcqX-VNtaAnUlG_sZE1AHMcJLSYa-di0',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Apr 10 2018 17:47:30 GMT+0800 (台北標準時間)
+[debug] [2018-04-10T09:47:31.042Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-10T09:47:31.076Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/lab06-eaebc  
+  
+ Tue Apr 10 2018 17:47:31 GMT+0800 (台北標準時間)
+[debug] [2018-04-10T09:47:31.986Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-10T09:47:31.986Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/lab06-eaebc/tokens  
+  
+ Tue Apr 10 2018 17:47:31 GMT+0800 (台北標準時間)
+[debug] [2018-04-10T09:47:32.759Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-10T09:47:32.759Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/lab06-eaebc  
+  
+ Tue Apr 10 2018 17:47:32 GMT+0800 (台北標準時間)
+[debug] [2018-04-10T09:47:33.628Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\NTHUCS\Desktop\Lab_06_SimpleFourm'...
+[info] 
+[debug] [2018-04-10T09:47:33.628Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/268921858779/clients/_:getWebAppConfig  
+  
+ Tue Apr 10 2018 17:47:33 GMT+0800 (台北標準時間)
+[debug] [2018-04-10T09:47:34.326Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+

@@ -11,6 +11,17 @@ function initApp() {
         ///         1. Get user input email and password to login
         ///         2. Back to index.html when login success
         ///         3. Show error message by "create_alert" and clean input field
+        var email = txtEmail.value;
+        var password = txtPassword.value;
+        firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+            window.location='index.html';
+        })
+        .catch(function(error) {
+            create_alert("error", error.message);
+            txtEmail.value = "";
+            txtPassword.value = "";
+        });
+        
     });
 
     btnGoogle.addEventListener('click', function () {
@@ -18,6 +29,15 @@ function initApp() {
         ///         1. Use popup function to login google
         ///         2. Back to index.html when login success
         ///         3. Show error message by "create_alert"
+        var provider = new firebase.auth.GoogleAuthProvider();
+        console.log('signInWithPopup');
+        firebase.auth().signInWithPopup(provider).then(function (result) {
+            var token = result.credential.accessToken;
+            var user = result.user;
+            window.location = 'index.html';
+        }).catch(function (error) {
+            create('error: ' + error.message);
+        });
     });
 
     btnSignUp.addEventListener('click', function () {        
@@ -25,6 +45,9 @@ function initApp() {
         ///         1. Get user input email and password to signup
         ///         2. Show success message by "create_alert" and clean input field
         ///         3. Show error message by "create_alert" and clean input field
+        var email = txtEmail.value;
+        var password = txtPassword.value;
+        firebase.auth().createUserWithEmailAndPassword(email, password).catch(e => console.log(e.message));
     });
 }
 
